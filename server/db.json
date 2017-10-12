@@ -1,0 +1,15 @@
+{
+	"persons" : [
+		{ 	"id" : 1, 
+			"photo" : null, 
+			"firstName" : "Иван", 
+			"lastName" : "Петров", 
+			"gender" : 1, 
+			"birthDate" : "1990-10-11", 
+			"jobTitle" : "Инженер", 
+			"skills" : [{"id" : 1, "title" : "Чтение"}, {"id" : 2, "title" : "Черчение"}, {"id" : 3, "title" : "Столоверчение"}],
+			"resume" : "В сочетании с Гуглом - богоподобен!"
+		}
+	]
+
+}
