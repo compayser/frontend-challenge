@@ -7,19 +7,25 @@
     <script src="app.js"></script>
   </head>
   <body ng-controller="PersonListController">
-
-      <ul>
-        <li ng-repeat="person in persons">
-          <div class="photo"><img src="{{person.photo}}"/></div>
-          <div class="info">
-          <p>{{person.firstName}}&nbsp;{{person.lastName}}</p>
-          <p>{{person.resume}}</p>
-          <div class="skills">
-            <span class="badge badge-info" ng-repeat="skill in person.skills">{{skill.title}}</span>
-          </div>
-        </li>
-      </ul>
-
+    <div class="container-fluid">
+      <div class="row">
+        Search: <input ng-model="query" />
+        
+      </div>
+      <div class="col-md-10">
+        <ul>
+          <li ng-repeat="person in persons | filter:query">
+            <div class="photo"><img src="{{person.photo}}"/></div>
+            <div class="info">
+            <p>{{person.firstName}}&nbsp;{{person.lastName}}</p>
+            <p>{{person.resume}}</p>
+            <div class="skills">
+              <span class="badge badge-info" ng-repeat="skill in person.skills">{{skill.title}}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
 
